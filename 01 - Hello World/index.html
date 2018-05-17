@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+
+  <!-- js -->
+  <script src="https://unpkg.com/jquery"></script>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+  <!-- plain javascript -->
+  <section id="app" class="section container">
+    <h1 class = 'title'>
+      Hi my name is {{name}} and my massage is {{message}}
+    </h1>
+
+    <input class="input" type="text" v-model ="name">
+    <input class="input" type="text" v-model ="message">
+  </section>
+
+  <!-- vue -->
+  <section class="section container">
+  </section>
+
+  <!-- our javascript -->
+  <script>
+    const app=new Vue({
+      el:"#app",
+      data:{
+        name:"Chris",
+        message: 'hello world!'
+      }
+    });
+  </script>
+</body>
+</html>
